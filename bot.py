@@ -41,7 +41,7 @@ def hendler_help(message):
 def callback(callback):
     if callback.data == "text_answer2":
         bot.send_message(callback.message.chat.id, "пока ничего нет")
-        bot.send_photo(callback.message.chat.id, open("venv/media/2363.PNG", "rb"))
+        bot.send_photo(callback.message.chat.id, open("media/2363.PNG", "rb"))
     elif callback.data == "text_answer3":
         bot.send_message(callback.message.chat.id, "описание команд и тп")
 
@@ -52,18 +52,18 @@ def callback(callback):
             btn5 = types.InlineKeyboardButton(user_data2["start"]["options"]["b"], callback_data='text_answer5')
             knopka.row(btn4, btn5)
             bot.send_message(callback.message.chat.id, user_data2["start"]["description"])
-            bot.send_photo(callback.message.chat.id, open("C:\\Users\\USER\\Desktop\\media\\final2.PNG", "rb"))
-            bot.send_photo(callback.message.chat.id, open("C:\\Users\\USER\\Desktop\\media\\final3.PNG", "rb"))
+            bot.send_photo(callback.message.chat.id, open("media/final2.PNG", "rb"))
+            bot.send_photo(callback.message.chat.id, open("media/final3.PNG", "rb"))
             bot.send_message(callback.message.chat.id, user_data2["start"]["description2"], reply_markup=knopka)
         elif user_data[callback.message.chat.id]["status_of_location"] == 1:
             bot.send_message(callback.message.chat.id, user_data2["loc4"]["description"])
-            bot.send_photo(callback.message.chat.id, open("C:\\Users\\USER\\Desktop\\media\\final7.PNG", "rb"))
+            bot.send_photo(callback.message.chat.id, open("media/final7.PNG", "rb"))
             knopka = types.InlineKeyboardMarkup()
             btn10 = types.InlineKeyboardButton(user_data2["loc4"]["options"]["a"], callback_data='text_answer10')
             knopka.row(btn10)
             bot.send_message(callback.message.chat.id, user_data2["loc4"]["description2"], reply_markup=knopka)
         elif user_data[callback.message.chat.id]["status_of_location"] == 2:
-            bot.send_photo(callback.message.chat.id, open("C:\\Users\\USER\\Desktop\\media\\final1.PNG", "rb"))
+            bot.send_photo(callback.message.chat.id, open("media/final1.PNG", "rb"))
             knopka = types.InlineKeyboardMarkup()
             btn16 = types.InlineKeyboardButton(user_data2["loc7"]["options"]["a"], callback_data='text_answer16')
             btn17 = types.InlineKeyboardButton(user_data2["loc7"]["options"]["b"], callback_data='text_answer17')
@@ -107,11 +107,11 @@ def callback(callback):
             btn8 = types.InlineKeyboardButton(user_data2["loc3"]["options"]["a"], callback_data='text_answer8')
             btn9 = types.InlineKeyboardButton(user_data2["loc3"]["options"]["b"], callback_data='text_answer9')
             knopka.row(btn8, btn9)
-            bot.send_photo(callback.message.chat.id, open("C:\\Users\\USER\\Desktop\\media\\final5.PNG", "rb"))
+            bot.send_photo(callback.message.chat.id, open("media/final5.PNG", "rb"))
             bot.send_message(callback.message.chat.id, user_data2["loc3"]["description"], reply_markup=knopka)
         elif callback.data == "text_answer7":
             bot.send_message(callback.message.chat.id, user_data2["loc2"]["police_setuation"])
-            bot.send_photo(callback.message.chat.id, open("C:\\Users\\USER\\Desktop\\media\\final4.PNG", "rb"))
+            bot.send_photo(callback.message.chat.id, open("media/final4.PNG", "rb"))
             bot.send_message(callback.message.chat.id,
                          "К сожалению вы не можете продолжать прозодить квест, для прохождения придется начать заново, все данные влияющие на прохождение будут стерты! Пройдите его заного, через команду /start или /regame",
                          )
@@ -126,7 +126,7 @@ def callback(callback):
             bot.send_message(callback.message.chat.id, user_data2["loc3"]["reading"], reply_markup=knopka)
         elif callback.data == "text_answer9":
             bot.send_message(callback.message.chat.id, user_data2["loc4"]["description"])
-            bot.send_photo(callback.message.chat.id, open("C:\\Users\\USER\\Desktop\\media\\final7.PNG", "rb"))
+            bot.send_photo(callback.message.chat.id, open("media/final7.PNG", "rb"))
             knopka = types.InlineKeyboardMarkup()
             btn10 = types.InlineKeyboardButton(user_data2["loc4"]["options"]["a"], callback_data='text_answer10')
             knopka.row(btn10)
@@ -137,7 +137,7 @@ def callback(callback):
         elif callback.data == "text_answer10":
             bot.send_message(callback.message.chat.id, user_data2["loc5"]["description"])
             bot.send_message(callback.message.chat.id, user_data2["loc6"]["description"])
-            bot.send_photo(callback.message.chat.id, open("C:\\Users\\USER\\Desktop\\media\\final8.PNG", "rb"))
+            bot.send_photo(callback.message.chat.id, open("media/final8.PNG", "rb"))
             knopka = types.InlineKeyboardMarkup()
             btn13 = types.InlineKeyboardButton(user_data2["loc6"]["options"]["b"], callback_data='text_answer13')
             btn14 = types.InlineKeyboardButton(user_data2["loc6"]["options"]["d"], callback_data='text_answer14')
@@ -148,13 +148,13 @@ def callback(callback):
         elif callback.data == "text_answer13":
             user_data[callback.message.chat.id]["inventory"].append("нож")
             bot.send_message(callback.message.chat.id, "В ваш инвентарь добавлен нож")
-            bot.send_photo(callback.message.chat.id, open("C:\\Users\\USER\\Desktop\\media\\final11.PNG", "rb"))
+            bot.send_photo(callback.message.chat.id, open("media/final11.PNG", "rb"))
         elif callback.data == "text_answer14":
             user_data[callback.message.chat.id]["inventory"] += ["отмычка и фонарик"]
             bot.send_message(callback.message.chat.id, "В ваш инвентарь добавлены отмычка и фонарик")
-            bot.send_photo(callback.message.chat.id, open("C:\\Users\\USER\\Desktop\\media\\final12.PNG", "rb"))
+            bot.send_photo(callback.message.chat.id, open("media/final12.PNG", "rb"))
         elif callback.data == "text_answer15":
-            bot.send_photo(callback.message.chat.id, open("C:\\Users\\USER\\Desktop\\media\\final1.PNG", "rb"))
+            bot.send_photo(callback.message.chat.id, open("media/final1.PNG", "rb"))
             knopka = types.InlineKeyboardMarkup()
             btn16 = types.InlineKeyboardButton(user_data2["loc7"]["options"]["a"], callback_data='text_answer16')
             btn17 = types.InlineKeyboardButton(user_data2["loc7"]["options"]["b"], callback_data='text_answer17')
@@ -168,7 +168,7 @@ def callback(callback):
             btn19 = types.InlineKeyboardButton(user_data2["loc7"]["options"]["d"], callback_data='text_answer19')
             knopka.row(btn18, btn19)
             bot.send_message(callback.message.chat.id, user_data2["loc7"]["description2"], reply_markup=knopka)
-            bot.send_photo(callback.message.chat.id, open("C:\\Users\\USER\\Desktop\\media\\final10.PNG", "rb"))
+            bot.send_photo(callback.message.chat.id, open("media/final10.PNG", "rb"))
         elif callback.data == "text_answer17":
             bot.send_message(callback.message.chat.id, "А ты был так близок... Пока ты брел домой ты замерз, это фиаско!")
             bot.send_message(callback.message.chat.id,
@@ -229,7 +229,7 @@ def callback(callback):
             bot.send_message(callback.message.chat.id, user_data2["loc13"]["description2"], reply_markup=knopka)
         elif callback.data == "text_answer25":
             bot.send_message(callback.message.chat.id, user_data2["loc12"]["description"])
-            bot.send_photo(callback.message.chat.id, open("C:\\Users\\USER\\Desktop\\media\\final15.PNG", "rb"))
+            bot.send_photo(callback.message.chat.id, open("media/final15.PNG", "rb"))
             bot.send_message(callback.message.chat.id,
                          "К сожалению вы не можете продолжать прозодить квест, для прохождения придется начать заново, все данные влияющие на прохождение будут стерты! Пройдите его заного, через команду /start или /regame",
                          )
@@ -240,7 +240,7 @@ def callback(callback):
             save_user_data(user_data, data_path)
         elif callback.data == "text_answer26":
             bot.send_message(callback.message.chat.id, user_data2["loc12"]["description2"])
-            bot.send_photo(callback.message.chat.id, open("C:\\Users\\USER\\Desktop\\media\\final13.PNG", "rb"))
+            bot.send_photo(callback.message.chat.id, open("media/final13.PNG", "rb"))
             user_data[callback.message.chat.id]["status_of_location"] = 0
             user_data[callback.message.chat.id]["level_in_level"] = ""
             user_data[callback.message.chat.id]["inventory"] = ["Ключи от дома и сейфа"]
@@ -257,7 +257,7 @@ def callback(callback):
             btn31 = types.InlineKeyboardButton(user_data2["loc13"]["options"]["options_for_c"]["b"], callback_data='text_answer31')
             knopka.row(btn30, btn31)
             bot.send_message(callback.message.chat.id, user_data2["loc13"]["options"]["c"], reply_markup=knopka)
-            bot.send_photo(callback.message.chat.id, open("C:\\Users\\USER\\Desktop\\media\\final14.PNG", "rb"))
+            bot.send_photo(callback.message.chat.id, open("media/final14.PNG", "rb"))
             user_data[callback.message.chat.id]["status_of_location"] = 4
             #todo: сохранение предфинальное
             save_user_data(user_data, data_path)
@@ -287,4 +287,5 @@ def audio(message):
 def photo(message):
     bot.send_message(message.chat.id, "Бот не расчитан на обработку фото")
 bot.polling()
+
 
